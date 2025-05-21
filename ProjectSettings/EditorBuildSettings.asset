@@ -6,27 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/1LevelPassword.unity
+    path: Assets/MyGame/Scenes/1LevelPassword.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Desktop1.unity
+    path: Assets/MyGame/Scenes/Desktop1.unity
     guid: e10cd03e793c584428aa18ff4e888acc
   - enabled: 1
-    path: Assets/Scenes/2LevelPasswort.unity
+    path: Assets/MyGame/Scenes/2LevelPasswort.unity
     guid: 63db21fe52f3ef541a332c596970b31e
   - enabled: 1
-    path: Assets/Scenes/Desktop2.unity
+    path: Assets/MyGame/Scenes/Desktop2.unity
     guid: 76f8a741c936940428cc35c8c946a9d3
   - enabled: 1
-    path: Assets/Scenes/3LevelPasswort.unity
+    path: Assets/MyGame/Scenes/3LevelPasswort.unity
     guid: f42bbbfdf8305cf4087faf803f511b6e
   - enabled: 1
-    path: Assets/Scenes/Desktop3.unity
+    path: Assets/MyGame/Scenes/Desktop3.unity
     guid: 6581a6b1cc9951d4c902c34904d35c70
   - enabled: 1
-    path: Assets/Scenes/Start.unity
+    path: Assets/MyGame/Scenes/Start.unity
     guid: 4f0e79d40c838b8499ad238a47ff22eb
   - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
+    path: Assets/MyGame/Scenes/GameOverScene.unity
     guid: 21a5fd9e68d966c4bb258459fb5efd47
   m_configObjects: {}
