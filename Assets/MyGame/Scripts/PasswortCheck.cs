@@ -5,24 +5,25 @@ using TMPro;
 
 public class LoginManager : MonoBehaviour
 {
-    public string HintText;
+    
     public TMP_InputField passwordInput;
     public TextMeshProUGUI errorText;
     public Button infoButton;
     public TextMeshProUGUI hintText;
+    public string HintText;
 
     public string correctPassword;
     private int attempts = 0;
     private int maxAttempts = 3;
-    public string nameDesktop;
+    public string gameOverSceneNumb;
 
-    public static int playerScore = 0; // <--- Punkte bleiben auch nach Szenenwechsel erhalten
+    
 
 
     void Start()
     {
-        infoButton.gameObject.SetActive(false);  // InfoButton ausblenden
-        hintText.gameObject.SetActive(false);    // Hinweistext ausblenden
+        infoButton.gameObject.SetActive(false);  
+        hintText.gameObject.SetActive(false);   
     }
 
     public void CheckPassword()
@@ -30,7 +31,7 @@ public class LoginManager : MonoBehaviour
         if (passwordInput.text == correctPassword)
         {
             errorText.text = "";
-            SceneManager.LoadScene(nameDesktop);
+            SceneManager.LoadScene("Quiz1");
         }
         else
         {
@@ -38,45 +39,31 @@ public class LoginManager : MonoBehaviour
 
             if (attempts == 2)
             {
-                infoButton.gameObject.SetActive(true);  // InfoButton anzeigen
+                infoButton.gameObject.SetActive(true); 
             }
 
             if (attempts >= maxAttempts)
             {
-                SceneManager.LoadScene("GameOverScene");
+                SceneManager.LoadScene(gameOverSceneNumb);
             }
             else
+
             {
+
                 int remaining = maxAttempts - attempts;
                 errorText.text = "Falsches Passwort! Noch " + remaining + " Versuch(e).";
             }
+
         }
     }
+
 
     public void ShowHint()
     {
-        hintText.gameObject.SetActive(true); // Hinweistext anzeigen
+        hintText.gameObject.SetActive(true); 
         hintText.text = HintText;
     }
 
-    public void CheckPasswordPoints()
-    {
-        if (passwordInput.text == correctPassword)
-        {
-            // Punkte basierend auf Versuch
-            if (attempts == 0)
-                playerScore = 3;
-            else if (attempts == 1)
-                playerScore = 2;
-            else
-                playerScore = 1;
-
-            SceneManager.LoadScene("MainScene");
-        }
-        else
-        {
-            attempts++;
-            
-        }
-    }
+    
+    
 }

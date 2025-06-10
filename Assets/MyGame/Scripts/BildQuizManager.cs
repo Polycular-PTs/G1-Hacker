@@ -1,0 +1,62 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
+public class BildQuizManager : MonoBehaviour
+{
+    public TMP_InputField inputField;
+    public TMP_Text feedbackText;
+    public string correctWord = "Apfel";
+    public string nextScene;
+    public int maxTries = 3;
+    private int triesLeft;
+
+    public GameObject retryButton; // 👈 Referenz zum Retry-Button
+
+    void Start()
+    {
+        triesLeft = maxTries;
+        feedbackText.text = "";
+        retryButton.SetActive(false); // Button zu Beginn deaktivieren
+    }
+
+    public void CheckWord()
+    {
+        string userInput = inputField.text.Trim();
+
+        if (userInput.Equals(correctWord, System.StringComparison.OrdinalIgnoreCase))
+        {
+            feedbackText.text = "Richtig!";
+            Invoke("LoadWinScene", 1.5f);
+        }
+        else
+        {
+            triesLeft--;
+
+            if (triesLeft > 0)
+            {
+                feedbackText.text = "Falsch! Noch " + triesLeft + " Versuche.";
+            }
+            else
+            {
+                feedbackText.text = "Falsch! Keine Versuche mehr.";
+                retryButton.SetActive(true); // Button anzeigen
+                inputField.interactable = false; // Eingabe deaktivieren
+            }
+        }
+    }
+
+    void LoadWinScene()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+
+    public void Retry()
+    {
+        // Szene neu laden (optional: Spiel zurücksetzen)
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+}
