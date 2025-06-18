@@ -8,7 +8,7 @@ public class StartMenu : MonoBehaviour
     public GameObject MenuBox;
     public void StartButton()
     {
-        SceneManager.LoadScene("1LevelPassword");
+        SceneManager.LoadScene("1LevelPasswort");
     }
     public void QuitButton()
     {
@@ -17,5 +17,9 @@ public class StartMenu : MonoBehaviour
     public void MenuButton()
     {
         MenuBox.gameObject.SetActive(true);
+    }
+    public void CloseMenuButton()
+    {
+        MenuBox.gameObject.SetActive(false);
     }
 }

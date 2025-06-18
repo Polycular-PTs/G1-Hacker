@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db63ff8d9bd50b4dacb733fb160f469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postPanel1: {fileID: 461463103}
+  postPanel1: {fileID: 801694326}
 --- !u!1 &256335459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1166,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &801694326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801694327}
+  - component: {fileID: 801694329}
+  - component: {fileID: 801694328}
+  m_Layer: 5
+  m_Name: Post1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &801694327
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801694326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10.122294, y: 6.281869, z: 15.199138}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1788500850}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 472, y: -202}
+  m_SizeDelta: {x: 93.7056, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &801694328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801694326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a5d08467eabcc154982d7542618d1c0b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &801694329
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801694326}
+  m_CullTransparentMesh: 1
 --- !u!1 &975272382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1637,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1965792680}
   m_Father: {fileID: 2027543312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1590,7 +1666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1909,9 +1985,10 @@ MonoBehaviour:
   errorText: {fileID: 1619221098}
   infoButton: {fileID: 627168164}
   hintText: {fileID: 456678433}
-  HintText: Sein Freund und er verreisen gern!
-  correctPassword: Umag
+  HintText: Er liebt deine Freundin.
+  correctPassword: lisaberg
   gameOverSceneNumb: 
+  nextScene: Quiz2
 --- !u!4 &1552046946
 Transform:
   m_ObjectHideFlags: 0
@@ -2137,7 +2214,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -2165,9 +2242,10 @@ RectTransform:
   - {fileID: 1949391290}
   - {fileID: 461463104}
   - {fileID: 637287168}
+  - {fileID: 801694327}
   - {fileID: 456678432}
-  - {fileID: 2064947555}
   - {fileID: 2027543312}
+  - {fileID: 2064947555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2411,12 +2489,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965792677}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -450.55865, y: -17.016855, z: 0}
+  m_LocalScale: {x: 0.56319827, y: 0.11497875, z: 0.9011174}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1090927703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027543311
 GameObject:
@@ -2431,7 +2509,7 @@ GameObject:
   - component: {fileID: 2027543314}
   - component: {fileID: 2027543313}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Show
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2446,7 +2524,7 @@ RectTransform:
   m_GameObject: {fileID: 2027543311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.66336, y: 13.045888, z: 1.6646}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1090927703}
@@ -2454,7 +2532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113, y: -470}
+  m_AnchoredPosition: {x: 240, y: -318}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027543313
@@ -2503,7 +2581,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 155146012}
         m_TargetAssemblyTypeName: Level2PostManager, Assembly-CSharp
-        m_MethodName: HidePost1
+        m_MethodName: ShowPost1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2526,7 +2604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2564,7 +2642,7 @@ GameObject:
   - component: {fileID: 2064947557}
   - component: {fileID: 2064947556}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Hide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2636,7 +2714,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 155146012}
         m_TargetAssemblyTypeName: Level2PostManager, Assembly-CSharp
-        m_MethodName: ShowPost1
+        m_MethodName: HidePost1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2690,6 +2768,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1788500850}
-  - {fileID: 1965792680}
   - {fileID: 1552046946}
   - {fileID: 155146011}

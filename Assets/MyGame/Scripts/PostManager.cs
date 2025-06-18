@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
 using TMPro;
 
 public class PostManager : MonoBehaviour
@@ -15,6 +14,13 @@ public class PostManager : MonoBehaviour
     {
         postPanel1.SetActive(false);
         postPanel2.SetActive(false); 
+        postPanel3.SetActive(false);
+        postPanel4.SetActive(false);
+    }
+    public void ReturnButton()
+    {
+        postPanel1.SetActive(false);
+        postPanel2.SetActive(false);
         postPanel3.SetActive(false);
         postPanel4.SetActive(false);
     }

@@ -12,24 +12,6 @@ EditorBuildSettings:
     path: Assets/MyGame/Scenes/1LevelPasswort.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/MyGame/Scenes/QuizScene.unity
-    guid: ef12e4cb4d8296048b38983cb8c6b34c
-  - enabled: 1
-    path: Assets/MyGame/Scenes/1Desktop.unity
-    guid: e10cd03e793c584428aa18ff4e888acc
-  - enabled: 1
-    path: Assets/MyGame/Scenes/2LevelPasswort.unity
-    guid: 63db21fe52f3ef541a332c596970b31e
-  - enabled: 1
-    path: Assets/MyGame/Scenes/2Desktop.unity
-    guid: 76f8a741c936940428cc35c8c946a9d3
-  - enabled: 1
-    path: Assets/MyGame/Scenes/3LevelPasswort.unity
-    guid: f42bbbfdf8305cf4087faf803f511b6e
-  - enabled: 1
-    path: Assets/MyGame/Scenes/3Desktop.unity
-    guid: 6581a6b1cc9951d4c902c34904d35c70
-  - enabled: 1
     path: Assets/MyGame/Scenes/GameOver1.unity
     guid: 21a5fd9e68d966c4bb258459fb5efd47
   - enabled: 1
@@ -38,4 +20,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyGame/Scenes/BildQuiz1.unity
     guid: b57f9dc02fe5568468f7e4da6c52af5e
+  - enabled: 1
+    path: Assets/MyGame/Scenes/1Desktop.unity
+    guid: e10cd03e793c584428aa18ff4e888acc
+  - enabled: 1
+    path: Assets/MyGame/Scenes/2LevelPasswort.unity
+    guid: 63db21fe52f3ef541a332c596970b31e
+  - enabled: 1
+    path: Assets/MyGame/Scenes/GameOver2.unity
+    guid: 317ff7be7ce51ce4190852031c36f86b
+  - enabled: 1
+    path: Assets/MyGame/Scenes/Quiz2.unity
+    guid: 9682fd8040ad9df419dbab8714f5ab5e
+  - enabled: 1
+    path: Assets/MyGame/Scenes/BildQuiz2.unity
+    guid: fe69bb798cad1cc48a079450addc647f
+  - enabled: 1
+    path: Assets/MyGame/Scenes/2Desktop.unity
+    guid: 76f8a741c936940428cc35c8c946a9d3
+  - enabled: 1
+    path: Assets/MyGame/Scenes/3LevelPasswort.unity
+    guid: f42bbbfdf8305cf4087faf803f511b6e
+  - enabled: 1
+    path: Assets/MyGame/Scenes/GameOver3.unity
+    guid: 456628eb0d052dd4d813766fd0893891
+  - enabled: 1
+    path: Assets/MyGame/Scenes/Quiz3.unity
+    guid: afd0bff16fba5094c96a5223b99c7e84
+  - enabled: 1
+    path: Assets/MyGame/Scenes/BildQuiz3.unity
+    guid: c4df9ec0d4f8e8d4aaf44d51e5d1dca3
+  - enabled: 1
+    path: Assets/MyGame/Scenes/3Desktop.unity
+    guid: 6581a6b1cc9951d4c902c34904d35c70
   m_configObjects: {}

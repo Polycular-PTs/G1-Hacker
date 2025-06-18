@@ -7,10 +7,11 @@ using TMPro;
 
 public class MultipleChoiceQuiz : MonoBehaviour
 {
-    public Button[] buttons;                        // Die 4 Antwort-Buttons
-    public TMP_Text fehlerText;                     // Fehlernachricht (TMP)
-    public Button tryAgainButton;                   // Try Again Button
-    public int[] richtigeAntworten;                 // Indexe der korrekten Antworten (z.B. [0,2])
+    public Button[] buttons;                        
+    public TMP_Text fehlerText;                  
+    public Button tryAgainButton;                  
+    public int[] richtigeAntworten;               
+
 
     private int richtigeGetroffen = 0;
     private bool antwortVerarbeitet = false;
@@ -22,14 +23,16 @@ public class MultipleChoiceQuiz : MonoBehaviour
         foreach (Button btn in buttons)
         {
             btn.onClick.AddListener(() => OnButtonClick(btn));
-        }
 
+
+        }
         tryAgainButton.gameObject.SetActive(false);
         tryAgainButton.onClick.AddListener(ResetFrage);
     }
 
     void OnButtonClick(Button clickedButton)
     {
+
         if (antwortVerarbeitet) return;
 
         int index = System.Array.IndexOf(buttons, clickedButton);
@@ -44,26 +47,32 @@ public class MultipleChoiceQuiz : MonoBehaviour
             {
                 antwortVerarbeitet = true;
                 StartCoroutine(SzeneNachDelayLaden());
+
             }
         }
         else
         {
+
             clickedButton.image.color = Color.red;
             fehlerText.text = "Try again";
             antwortVerarbeitet = true;
             DeaktiviereAlleAntworten();
+
         }
     }
 
     void DeaktiviereAlleAntworten()
     {
+
         foreach (Button btn in buttons)
         {
             btn.interactable = false;
-            btn.gameObject.SetActive(false);  // Blendet Buttons aus
+            btn.gameObject.SetActive(false);  
         }
 
-        tryAgainButton.gameObject.SetActive(true); // Zeigt Try Again Button
+        tryAgainButton.gameObject.SetActive(true); 
+
+
     }
 
     void ResetFrage()
@@ -76,6 +85,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
         {
             buttons[i].interactable = true;
             buttons[i].gameObject.SetActive(true);
+
             buttons[i].image.color = Color.white; 
         }
 
@@ -83,8 +93,11 @@ public class MultipleChoiceQuiz : MonoBehaviour
     }
 
     IEnumerator SzeneNachDelayLaden()
+
     {
+
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(nextScene); 
     }
+
 }

@@ -3577,8 +3577,9 @@ MonoBehaviour:
   infoButton: {fileID: 627168164}
   hintText: {fileID: 456678433}
   HintText: Sie liebt ihre Katze Tom seit seiner Geburt!
-  correctPassword: 12.03.2016
+  correctPassword: 12032016
   gameOverSceneNumb: GameOver1
+  nextScene: Quiz1
 --- !u!4 &1552046946
 Transform:
   m_ObjectHideFlags: 0
@@ -4072,7 +4073,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0

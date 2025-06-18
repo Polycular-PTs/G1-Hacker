@@ -9,6 +9,7 @@ public class LoginManager : MonoBehaviour
     public TMP_InputField passwordInput;
     public TextMeshProUGUI errorText;
     public Button infoButton;
+
     public TextMeshProUGUI hintText;
     public string HintText;
 
@@ -16,6 +17,7 @@ public class LoginManager : MonoBehaviour
     private int attempts = 0;
     private int maxAttempts = 3;
     public string gameOverSceneNumb;
+    public string nextScene;
 
     
 
@@ -31,14 +33,19 @@ public class LoginManager : MonoBehaviour
         if (passwordInput.text == correctPassword)
         {
             errorText.text = "";
-            SceneManager.LoadScene("Quiz1");
+            SceneManager.LoadScene(nextScene);
+
         }
         else
+
+        
         {
             attempts++;
 
+
             if (attempts == 2)
             {
+            
                 infoButton.gameObject.SetActive(true); 
             }
 
@@ -54,8 +61,12 @@ public class LoginManager : MonoBehaviour
                 errorText.text = "Falsches Passwort! Noch " + remaining + " Versuch(e).";
             }
 
+
         }
+
+
     }
+
 
 
     public void ShowHint()
@@ -64,6 +75,4 @@ public class LoginManager : MonoBehaviour
         hintText.text = HintText;
     }
 
-    
-    
-}
+ }

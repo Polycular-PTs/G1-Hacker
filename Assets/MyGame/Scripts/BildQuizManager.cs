@@ -7,20 +7,23 @@ using TMPro;
 
 public class BildQuizManager : MonoBehaviour
 {
+
     public TMP_InputField inputField;
     public TMP_Text feedbackText;
+
     public string correctWord = "Apfel";
     public string nextScene;
     public int maxTries = 3;
     private int triesLeft;
 
-    public GameObject retryButton; // 👈 Referenz zum Retry-Button
+    public GameObject retryButton; 
 
     void Start()
     {
         triesLeft = maxTries;
         feedbackText.text = "";
-        retryButton.SetActive(false); // Button zu Beginn deaktivieren
+
+        retryButton.SetActive(false); 
     }
 
     public void CheckWord()
@@ -37,14 +40,17 @@ public class BildQuizManager : MonoBehaviour
             triesLeft--;
 
             if (triesLeft > 0)
+
             {
                 feedbackText.text = "Falsch! Noch " + triesLeft + " Versuche.";
             }
             else
             {
+
                 feedbackText.text = "Falsch! Keine Versuche mehr.";
-                retryButton.SetActive(true); // Button anzeigen
-                inputField.interactable = false; // Eingabe deaktivieren
+                retryButton.SetActive(true);
+                inputField.interactable = false;
+
             }
         }
     }
@@ -52,11 +58,14 @@ public class BildQuizManager : MonoBehaviour
     void LoadWinScene()
     {
         SceneManager.LoadScene(nextScene);
+
     }
 
     public void Retry()
+
     {
-        // Szene neu laden (optional: Spiel zurücksetzen)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 }
+
