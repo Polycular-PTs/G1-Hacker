@@ -75,4 +75,6 @@ public class LoginManager : MonoBehaviour
         hintText.text = HintText;
     }
 
+
  }
+
