@@ -1265,7 +1265,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 1414273453}
   feedbackText: {fileID: 875742774}
-  correctWord: Hacken
+  correctWord:
+  - Hacken
+  - Hacker
+  - 
   nextScene: 1Desktop
   maxTries: 3
   retryButton: {fileID: 1102959709}
