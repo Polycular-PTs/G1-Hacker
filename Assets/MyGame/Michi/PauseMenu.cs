@@ -5,13 +5,21 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PausePanel;
+    public GameObject SettingsPanel;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        PausePanel.SetActive(false);
+        SettingsPanel.SetActive(false);
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             PausePanel.SetActive(true);
+            SettingsPanel.SetActive(false);
+
             Time.timeScale = 0;
         }
     }
@@ -19,7 +27,15 @@ public class PauseMenu : MonoBehaviour
     public void ResumeButton()
     {
         PausePanel.SetActive(false);
+        
         Time.timeScale = 1;
+    }
+
+    public void SettingsButton()
+    {
+        PausePanel.SetActive(false);
+        SettingsPanel.SetActive(true);
+
     }
 
     public void MainMenuButton()
