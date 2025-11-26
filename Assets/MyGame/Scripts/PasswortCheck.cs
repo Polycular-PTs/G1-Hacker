@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class LoginManager : MonoBehaviour
 {
@@ -18,8 +19,10 @@ public class LoginManager : MonoBehaviour
     private int maxAttempts = 3;
     public string gameOverSceneNumb;
     public string nextScene;
+    public AudioSource audioSource;
+    public AudioClip correctAudio;
+    public AudioClip wrongAudio;
 
-    
 
 
     void Start()
@@ -33,7 +36,9 @@ public class LoginManager : MonoBehaviour
         if (passwordInput.text == correctPassword)
         {
             errorText.text = "";
-            SceneManager.LoadScene(nextScene);
+            audioSource.PlayOneShot(correctAudio);
+            StartCoroutine(LoadAfterDelay());
+          
 
         }
         else
@@ -41,6 +46,7 @@ public class LoginManager : MonoBehaviour
         
         {
             attempts++;
+            audioSource.PlayOneShot(wrongAudio);
 
 
             if (attempts == 2)
@@ -75,6 +81,11 @@ public class LoginManager : MonoBehaviour
         hintText.text = HintText;
     }
 
+    private IEnumerator LoadAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(nextScene);
+    }
 
- }
+}
 

@@ -15,6 +15,9 @@ public class BildQuizManager : MonoBehaviour
     public string nextScene;
     public int maxTries = 3;
     private int triesLeft;
+    public AudioSource audioSource;
+    public AudioClip correctAudio;
+    public AudioClip wrongAudio;
 
     public GameObject retryButton; 
 
@@ -34,11 +37,13 @@ public class BildQuizManager : MonoBehaviour
         w.Equals(userInput, System.StringComparison.OrdinalIgnoreCase)))
         {
             feedbackText.text = "Richtig!";
+            audioSource.PlayOneShot(correctAudio);
             Invoke("LoadWinScene", 1.5f);
         }
         else
         {
             triesLeft--;
+            audioSource.PlayOneShot(wrongAudio);
 
             if (triesLeft > 0)
 
