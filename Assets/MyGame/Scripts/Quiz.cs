@@ -10,7 +10,11 @@ public class MultipleChoiceQuiz : MonoBehaviour
     public Button[] buttons;                        
     public TMP_Text fehlerText;                  
     public Button tryAgainButton;                  
-    public int[] richtigeAntworten;               
+    public int[] richtigeAntworten;
+    public AudioSource audioSource;
+    public AudioClip correctAudio;
+    public AudioClip wrongAudio;
+   
 
 
     private int richtigeGetroffen = 0;
@@ -42,6 +46,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
             clickedButton.image.color = Color.green;
             clickedButton.interactable = false;
             richtigeGetroffen++;
+            audioSource.PlayOneShot(correctAudio);
 
             if (richtigeGetroffen == richtigeAntworten.Length)
             {
@@ -56,6 +61,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
             clickedButton.image.color = Color.red;
             fehlerText.text = "Try again";
             antwortVerarbeitet = true;
+            audioSource.PlayOneShot(wrongAudio);
             DeaktiviereAlleAntworten();
 
         }

@@ -11,10 +11,13 @@ public class BildQuizManager : MonoBehaviour
     public TMP_InputField inputField;
     public TMP_Text feedbackText;
 
-    public string correctWord = "Apfel";
+    public string[] correctWord = new string[3];
     public string nextScene;
     public int maxTries = 3;
     private int triesLeft;
+    public AudioSource audioSource;
+    public AudioClip correctAudio;
+    public AudioClip wrongAudio;
 
     public GameObject retryButton; 
 
@@ -30,14 +33,17 @@ public class BildQuizManager : MonoBehaviour
     {
         string userInput = inputField.text.Trim();
 
-        if (userInput.Equals(correctWord, System.StringComparison.OrdinalIgnoreCase))
+        if (System.Array.Exists(correctWord, w =>
+        w.Equals(userInput, System.StringComparison.OrdinalIgnoreCase)))
         {
             feedbackText.text = "Richtig!";
+            audioSource.PlayOneShot(correctAudio);
             Invoke("LoadWinScene", 1.5f);
         }
         else
         {
             triesLeft--;
+            audioSource.PlayOneShot(wrongAudio);
 
             if (triesLeft > 0)
 
