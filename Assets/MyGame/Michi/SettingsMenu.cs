@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class SettingsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SetQuality (int qualityIndex) 
     {
-        
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetFullscreen (bool isFullscreen)
     {
-        
+        Screen.fullScreen = isFullscreen;
     }
 }
