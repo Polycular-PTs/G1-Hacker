@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    //Variables
     public GameObject PausePanel;
     public GameObject SettingsPanel;
 
@@ -12,7 +13,8 @@ public class PauseMenu : MonoBehaviour
         PausePanel.SetActive(false);
         SettingsPanel.SetActive(false);
     }
-
+        
+    //Open Menu
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -24,6 +26,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    //Resume
     public void ResumeButton()
     {
         PausePanel.SetActive(false);
@@ -31,6 +34,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    //Settings
     public void SettingsButton()
     {
         PausePanel.SetActive(false);
@@ -38,6 +42,7 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    //Main Menu
     public void MainMenuButton()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Start");

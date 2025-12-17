@@ -6,9 +6,11 @@ using TMPro;
 
 public class SettingsMenu : MonoBehaviour
 {
+    //Variables
     public TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
     
+    //Resolution Settings
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -39,11 +41,13 @@ public class SettingsMenu : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
+    //Quality Setting
     public void SetQuality (int qualityIndex) 
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
+    //Fullscreen Setting
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
