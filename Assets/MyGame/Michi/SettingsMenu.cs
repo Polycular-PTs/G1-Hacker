@@ -14,6 +14,7 @@ public class SettingsMenu : MonoBehaviour
     void Start()
     {
         resolutions = Screen.resolutions;
+        
 
         resolutionDropdown.ClearOptions();
 
@@ -33,6 +34,9 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        PlayerPrefs.SetInt("Fullscreen", 0);
+        Debug.Log(PlayerPrefs.GetInt("Fullscreen"));
     }
 
     public void SetResolution (int resolutionIndex)
@@ -52,4 +56,8 @@ public class SettingsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
+
+
+    //Save Resolution
+
 }

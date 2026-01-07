@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public GameObject MenuBox;
+    
+    public void TutorialButton()
+    {
+        SceneManager.LoadScene("TUT");
+    }
+    
     public void StartButton()
     {
         SceneManager.LoadScene("1LevelPasswort");
