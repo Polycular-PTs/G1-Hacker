@@ -3,34 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class StoryLevel : MonoBehaviour
 {
-    public GameObject[] slides;
-    public string nextSceneName;
-    private int currentIndex = 0;
+    public GameObject[] storySlides;
+    public string nextScene;
+    private int currentSlideIndex = 0;
 
     void Start()
     {
-        for (int i = 0; i < slides.Length; i++)
-            slides[i].SetActive(i == 0);
+        for (int i = 0; i < storySlides.Length; i++)
+            storySlides[i].SetActive(i == 0);
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && currentIndex < slides.Length - 1)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && currentSlideIndex < storySlides.Length - 1)
         {
-            slides[currentIndex].SetActive(false);
-            currentIndex++;
-            slides[currentIndex].SetActive(true);
+            storySlides[currentSlideIndex].SetActive(false);
+            currentSlideIndex++;
+            storySlides[currentSlideIndex].SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentIndex > 0)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentSlideIndex > 0)
         {
-            slides[currentIndex].SetActive(false);
-            currentIndex--;
-            slides[currentIndex].SetActive(true);
+            storySlides[currentSlideIndex].SetActive(false);
+            currentSlideIndex--;
+            storySlides[currentSlideIndex].SetActive(true);
         }
 
-        if (currentIndex == slides.Length - 1 && Input.anyKeyDown)
+        if (currentSlideIndex == storySlides.Length - 1 && Input.anyKeyDown)
         {
-            SceneManager.LoadScene(nextSceneName);
+            SceneManager.LoadScene(nextScene);
        
         }
     }

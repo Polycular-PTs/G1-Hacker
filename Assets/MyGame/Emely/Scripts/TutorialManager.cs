@@ -4,62 +4,62 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    public Text textFeld;         
-    public string[] texte;
-    private int aktuellerIndex = 0;
-    private bool fertig = false;
-    public GameObject szeneObj;
-    public GameObject[] bilder;
+    public Text tutorialTextfeld;         
+    public string[] tutorialTexte;
+    private int currentIndex = 0;
+    private bool isFinished = false;
+    public GameObject sceneObj;
+    public GameObject[] imagesToActivate;
 
     void Start()
     {
-        if (texte.Length > 0)
+        if (tutorialTexte.Length > 0)
         {
-            textFeld.text = texte[0];
+            tutorialTextfeld.text = tutorialTexte[0];
         }
     }
 
     void Update()
 
     {
-        if (fertig) return;
+        if (isFinished) return;
 
        
         if (Input.anyKeyDown)
         {
             
-            aktuellerIndex++;
+            currentIndex++;
 
             
-            if (aktuellerIndex >= texte.Length)
+            if (currentIndex >= tutorialTexte.Length)
             {
-                BeendeTutorial();
+                FinishTutorial();
                 return;
             }
-            textFeld.text = texte[aktuellerIndex];
+            tutorialTextfeld.text = tutorialTexte[currentIndex];
         }
     }
 
-    void BeendeTutorial()
+    void FinishTutorial()
     {
-        fertig = true;
+        isFinished = true;
 
         
-        if (textFeld != null)
-            Destroy(textFeld.gameObject);
+        if (tutorialTextfeld != null)
+            Destroy(tutorialTextfeld.gameObject);
 
-        if (szeneObj != null)
-            Destroy(szeneObj);
+        if (sceneObj != null)
+            Destroy(sceneObj);
 
-        AktiviereBilder();
+        ActivateImages();
     }
 
-    void AktiviereBilder()
+    void ActivateImages()
     {
-        foreach (GameObject bild in bilder)
+        foreach (GameObject image in imagesToActivate)
         {
-            if (bild != null)
-                bild.SetActive(true);
+            if (image != null)
+                image.SetActive(true);
         }
   
     }
