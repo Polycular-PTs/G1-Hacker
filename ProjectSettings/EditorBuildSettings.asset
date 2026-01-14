@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyGame/Scenes/3Desktop.unity
     guid: 6581a6b1cc9951d4c902c34904d35c70
+  - enabled: 1
+    path: Assets/MyGame/Emely/TUT.unity
+    guid: 725db520583d1c44c97380ba1ea6d3d3
   m_configObjects: {}
