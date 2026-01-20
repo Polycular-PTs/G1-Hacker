@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public GameObject MenuBox;
-    
+
+    public GameObject SettingsPanel;
+
+    private void Start()
+    {
+        SettingsPanel.SetActive(false);
+    }
+
     public void TutorialButton()
     {
         SceneManager.LoadScene("TUT");
@@ -22,7 +29,7 @@ public class StartMenu : MonoBehaviour
     }
     public void MenuButton()
     {
-        MenuBox.gameObject.SetActive(true);
+        SettingsPanel.SetActive(true);
     }
     public void CloseMenuButton()
     {
