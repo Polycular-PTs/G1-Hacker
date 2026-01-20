@@ -1,0 +1,36 @@
+// Emely Auleitner
+Refactoring vom PasswortCheckTut:
+
+R1: Zeile 8 – Die TMP_InputField-Variable wird umbenannt, um klarer darzustellen, dass es sich um das Passwortfeld handelt.
+public TMP_InputField passwordInput; --> public TMP_InputField passwordInputField;
+
+R2: Zeile 9 – Das GameObject-Array wird umbenannt, um verständlicher zu machen, dass es sich um auszublendende Objekte handelt.
+public GameObject[] objs; --> public GameObject[] objectsToHide;
+
+R3: Zeile 10 – Die TMP_Text-Variable wird umbenannt, um klarer zu machen, dass sie für Informationstexte verwendet wird.
+public TMP_Text infoText; --> public TMP_Text infoMessageText;
+
+R4: Zeile 11 – Die TMP_Text-Variable wird umbenannt, um darzustellen, dass sie den Abschlusstext enthält.
+public TMP_Text finalText; --> public TMP_Text finalMessageText;
+
+R5: Zeile 12 – Die TMP_Text-Variable wird umbenannt, um klarer zu machen, dass sie einen Hinweis anzeigt.
+public TMP_Text hintText; --> public TMP_Text hintMessageText;
+
+R6: Zeile 13 – Die String-Variable wird umbenannt, um deutlich zu machen, dass sie das korrekte Passwort speichert.
+public string korrektesPasswort = "1234"; --> public string correctPassword = "1234";
+
+R7: Zeile 15 – Die Float-Variable wird umbenannt, um klarer zu machen, wie lange der Infotext angezeigt wird.
+public float infoDisplayTime = 4f; --> public float infoTextDisplayDuration = 4f;
+
+R8: Zeile 16 – Die String-Variable wird umbenannt, um darzustellen, dass sie den Namen der nächsten Szene enthält.
+public string nextSceneName = "NextScene"; --> public string nextScene = "NextScene";
+
+R9: Zeile 18 – Die Float-Variable wird umbenannt, um klarer zu machen, wie lange der Hinweis angezeigt wird.
+public float hintDisplayTime = 3f; --> public float hintTextDisplayDuration = 3f;
+
+R10: Zeile 20 – Die Bool-Variable wird umbenannt, um klarer darzustellen, ob eine Taste gedrückt werden darf.
+private bool canPressKey = false; --> private bool canContinue = false;
+
+R13: Zeile 35 – Der Methodenname wird angepasst, um klarer zu beschreiben, was die Coroutine macht.
+private IEnumerator ShowInfoHideObjectsAndShowFinal()
+--> private IEnumerator ShowSuccessMessageAndFinishTutorial()

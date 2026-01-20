@@ -5,62 +5,62 @@ using UnityEngine.SceneManagement;
 
 public class PasswortCheckerTut : MonoBehaviour
 {
-    public TMP_InputField passwordInput;
-    public GameObject[] objs;
-    public TMP_Text infoText;
-    public TMP_Text finalText;
-    public TMP_Text hintText;           
-    public string korrektesPasswort = "1234";
+    public TMP_InputField passwordInputField;
+    public GameObject[] objectsToHide;
+    public TMP_Text infoMessageText;
+    public TMP_Text finalMessageText;
+    public TMP_Text hintMessageText;           
+    public string correctPassword = "1234";
 
-    public float infoDisplayTime = 4f;
-    public string nextSceneName = "NextScene";
+    public float infoTextDisplayDuration = 4f;
+    public string nextScene = "NextScene";
     
-    public float hintDisplayTime = 3f; 
+    public float hintTextDisplayDuration = 3f; 
 
-    private bool canPressKey = false;
+    private bool canContinue = false;
 
     public void OnLoginButtonPressed()
     {
-        if (passwordInput.text == korrektesPasswort)
+        if (passwordInputField.text == correctPassword)
         {
-            StartCoroutine(ShowInfoHideObjectsAndShowFinal());
+            StartCoroutine(ShowSuccessMessageAndFinishTutorial());
         }
         else
         {
             Debug.Log("Falsches Passwort!");
-            passwordInput.text = "";
+            passwordInputField.text = "";
         }
     }
 
-    private IEnumerator ShowInfoHideObjectsAndShowFinal()
+    private IEnumerator ShowSuccessMessageAndFinishTutorial()
     {
         // passwort korrekt
-        infoText.text = "Passwort korrekt!";
-        infoText.gameObject.SetActive(true);
+        infoMessageText.text = "Passwort korrekt!";
+        infoMessageText.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(infoDisplayTime);
-        infoText.gameObject.SetActive(false);
+        yield return new WaitForSeconds(infoTextDisplayDuration);
+        infoMessageText.gameObject.SetActive(false);
 
         // objs ausblenden
-        foreach (GameObject obj in objs)
+        foreach (GameObject obj in objectsToHide)
         {
             obj.SetActive(false);
         }
 
         //refactoring!!
-        finalText.text = "Tutorial beendet! Drücke eine Taste, um fortzufahren!";
-        finalText.gameObject.SetActive(true);
-        canPressKey = true;
+        finalMessageText.text = "Tutorial beendet! Drücke eine Taste, um fortzufahren!";
+        finalMessageText.gameObject.SetActive(true);
+        canContinue = true;
 
         Debug.Log("Final-Text angezeigt. Warten auf Tastendruck.");
     }
 
     private void Update()
     {
-        if (canPressKey && Input.anyKeyDown)
+        if (canContinue && Input.anyKeyDown)
         {
-            canPressKey = false;
-            SceneManager.LoadScene(nextSceneName);
+            canContinue = false;
+            SceneManager.LoadScene(nextScene);
         }
     }
 
@@ -74,11 +74,11 @@ public class PasswortCheckerTut : MonoBehaviour
 
     private IEnumerator ShowHint()
     {
-        hintText.text = "Zahlen im Namen!";
-        hintText.gameObject.SetActive(true);
+        hintMessageText.text = "Zahlen im Namen!";
+        hintMessageText.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(hintDisplayTime);
-        hintText.gameObject.SetActive(false);
+        yield return new WaitForSeconds(hintTextDisplayDuration);
+        hintMessageText.gameObject.SetActive(false);
   
     }
 }

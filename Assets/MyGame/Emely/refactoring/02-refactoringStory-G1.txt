@@ -1,0 +1,14 @@
+// Emely Auleitner
+Refactoring vom Story:
+
+R1: Zeile 6 – Das GameObject-Array wird umbenannt, um klarer darzustellen, dass es sich um Story-Slides handelt.
+public GameObject[] slides; --> public GameObject[] storySlides;
+(gleich bei der Anpassung der Variable Strg + R -2x und Enter, um den Namen im ganzen Scribt zu ändern)
+
+R2: Zeile 7 – Die String Variable wird umbenannt, um deutlich zu machen, dass sie den Namen der nächsten Szene speichert.
+public string nextSceneName; --> public string nextScene;
+(gleich bei der Anpassung der Variable Strg + R -2x und Enter, um den Namen im ganzen Scribt zu ändern)
+
+R3: Zeile 8 – Die Integer-Variable wird umbenannt, um verständlicher zu machen, dass sie den aktuellen Slide-Index speichert.
+private int currentIndex = 0; --> private int currentSlideIndex = 0;
+(gleich bei der Anpassung der Variable Strg + R -2x und Enter, um den Namen im ganzen Scribt zu ändern)

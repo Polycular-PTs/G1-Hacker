@@ -1,0 +1,82 @@
+// Emely Auleitner
+Refactoring vom TutorialManager:
+
+
+R1: Zeile 7 – Die öffentliche Text Variable wird umbenannt, damit sie aussagekräftiger ist.
+public Text textFeld; --> public Text tutorialTextfeld;
+
+R2: Zeile 8 – Das String-Array wird umbenannt, um klarer zu machen, dass es Tutorialtexte enthält.
+public string[] texte; --> public string[] tutorialTexte;
+
+R3: Zeile 9 – Die Integer Variable wird umbenannt, um den Zweck deutlicher darzustellen.
+private int aktuellerIndex = 0; --> private int currentIndex = 0;
+
+R4: Zeile 10 – Die Bool Variable wird umbenannt, um besser zu beschreiben, ob das Tutorial beendet ist.
+private bool fertig = false; --> private bool isFinished = false;
+
+R5: Zeile 11 – Die GameObject Variable wird umbenannt, damit klar ist welches Objekt gemeint ist.
+public GameObject szeneObj; --> public GameObject sceneObject;
+
+R6: Zeile 12 – Das GameObject-Array wird umbenannt, um verständlicher zu machen, dass Bilder aktiviert werden.
+public GameObject[] bilder; --> public GameObject[] imagesToActivate;
+
+R7: Zeile 18 – Der Zugriff auf das Textfeld wird an die neue Variablenbezeichnung angepasst.
+textFeld.text = texte[0]; --> tutorialText.text = tutorialTexts[0];
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+R8: Zeile 25 – Die Abfrage der Bool-Variable wird an den neuen Namen angepasst.
+if (fertig) return; --> if (isFinished) return;
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+R9: Zeile 31 – Der Index wird mit dem neuen Variablennamen erhöht.
+aktuellerIndex++; --> currentIndex++;
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+R10: Zeile 34 – Der Vergleich mit der Länge des Textarrays wird an die neuen Namen angepasst.
+if (aktuellerIndex >= texte.Length)
+--> if (currentIndex >= tutorialTexts.Length)
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+R11: Zeile 43 – Der Methodenname wird ins Englische übersetzt.
+BeendeTutorial(); --> FinishTutorial();
+
+R12: Zeile 39 – Der Text des Tutorials wird mit den neuen Variablennamen gesetzt.
+textFeld.text = texte[aktuellerIndex];
+--> tutorialText.text = tutorialTexts[currentIndex];
+
+R13: Zeile 38 – Die Methode wird umbenannt und die Bool Variable angepasst.
+void BeendeTutorial()
+--> void FinishTutorial()
+(oder gleich bei der Anpassung der Methode Strg + R -2x und Enter)
+
+R14: Zeile 45 – Die Bool Variable wird mit dem neuen Namen gesetzt.
+fertig = true; --> isFinished = true;
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+
+R15: Zeile 49 – Der Zugriff auf das Textfeld wird an den neuen Namen angepasst.
+if (textFeld != null) Destroy(textFeld.gameObject);
+--> if (tutorialText != null) Destroy(tutorialText.gameObject);
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+R16: Zeile 51 – Die GameObject Variable wird an den neuen Namen angepasst.
+if (szeneObj != null) Destroy(szeneObj);
+--> if (sceneObject != null) Destroy(sceneObject);
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+R17: Zeile 57 – Der Methodenname wird ins Englische übersetzt.
+AktiviereBilder(); --> ActivateImages();
+
+R18: Zeile 54 – Die Methode zum Aktivieren der Bilder wird umbenannt.
+void AktiviereBilder()
+--> void ActivateImages()
+(oder gleich bei der Anpassung der Methode Strg + R -2x und Enter)
+
+R19: Zeile 59 – Die foreach-Schleife wird an den neuen Variablennamen angepasst.
+foreach (GameObject bild in bilder)
+--> foreach (GameObject image in imagesToActivate)
+(oder gleich bei der Anpassung der Variable Strg + R -2x und Enter)
+
+R20: Zeile 59 – Die Variable innerhalb der Schleife wird umbenannt.
+if (bild != null) bild.SetActive(true);
+--> if (image != null) image.SetActive(true);
