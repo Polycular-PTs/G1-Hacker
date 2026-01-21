@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PostManager : MonoBehaviour
 {
-    public GameObject[] postPanels;
+    public GameObject[] postPanels; //#18, #19
 
     void Start()
     {
