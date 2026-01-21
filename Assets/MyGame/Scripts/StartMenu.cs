@@ -27,12 +27,17 @@ public class StartMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void MenuButton()
+    public void SettingsButton()
     {
         SettingsPanel.SetActive(true);
     }
-    public void CloseMenuButton()
+    public void Update()
     {
-        MenuBox.gameObject.SetActive(false);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SettingsPanel.SetActive(false);
+
+            Time.timeScale = 0;
+        }
     }
 }

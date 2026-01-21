@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     //Variables
     public GameObject PausePanel;
     public GameObject SettingsPanel;
+    const string START_SCENE = "Start";
 
     private void Start()
     {
@@ -45,6 +46,6 @@ public class PauseMenu : MonoBehaviour
     //Main Menu
     public void MainMenuButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(START_SCENE);
     }
 }
