@@ -66,6 +66,14 @@ Screenshots:
 <img width="837" height="460" alt="G1-ingameBild (4)" src="https://github.com/user-attachments/assets/eb297bfa-74e6-4885-886a-48290d56871f" />
 
 
+Video:
+
+
+https://github.com/user-attachments/assets/ab2ae35d-ea67-4e21-a61c-40136f4f4786
+
+
+
+
 
 Development Platform
 
