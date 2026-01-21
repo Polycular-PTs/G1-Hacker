@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public GameObject MenuBox;
-
+    public GameObject UiManager;
     public GameObject SettingsPanel;
 
     private void Start()
@@ -30,12 +29,16 @@ public class StartMenu : MonoBehaviour
     public void SettingsButton()
     {
         SettingsPanel.SetActive(true);
+        UiManager.SetActive(false);
+
+        Time.timeScale = 1;
     }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SettingsPanel.SetActive(false);
+            UiManager.SetActive(true);
 
             Time.timeScale = 0;
         }
