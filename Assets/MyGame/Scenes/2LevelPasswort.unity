@@ -1126,6 +1126,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause_and_Settings-Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3391791999929874852, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448497270641719898, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4618996670646912016, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2083,7 +2091,7 @@ MonoBehaviour:
   errorText: {fileID: 1619221098}
   infoButton: {fileID: 627168164}
   hintText: {fileID: 456678433}
-  HintText: Er liebt deine Freundin.
+  HintText: Er liebt seine Freundin.
   correctPassword: lisaberg
   gameOverSceneNumb: 
   nextScene: Quiz2

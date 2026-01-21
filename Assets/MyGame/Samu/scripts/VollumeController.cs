@@ -4,12 +4,13 @@ using UnityEngine.UI;
 public class VolumeController : MonoBehaviour
 {
     public Slider volumeSlider;
-    public AudioSource audioSource;
+    private AudioSource audioSource;
 
     private const string VolumeKey = "MasterVolume";
 
     private void Start()
     {
+        audioSource = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
         if (audioSource == null)
         {
             Debug.LogError("Keine AudioSource zugewiesen!");

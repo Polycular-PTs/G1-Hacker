@@ -1460,6 +1460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause_and_Settings-Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3391791999929874852, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3531433861759076949, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1506,6 +1510,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4322390288004231508, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448497270641719898, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4618996670646912016, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
@@ -2046,6 +2054,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1902226368760696326, guid: 04860f5fb48282c44b92ce6eadc7dea1, type: 3}
+      propertyPath: m_Volume
+      value: 0.196
+      objectReference: {fileID: 0}
     - target: {fileID: 6270108008955079994, guid: 04860f5fb48282c44b92ce6eadc7dea1, type: 3}
       propertyPath: m_Name
       value: AudioSorce

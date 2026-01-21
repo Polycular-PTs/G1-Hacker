@@ -897,6 +897,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause_and_Settings-Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3144494816219704612, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391791999929874852, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3531433861759076949, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -943,6 +951,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4322390288004231508, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448497270641719898, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4618996670646912016, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
@@ -1036,6 +1048,14 @@ PrefabInstance:
     - target: {fileID: 4618996670646912016, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469307295156116873, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -910.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469307295156116873, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -476.18
       objectReference: {fileID: 0}
     - target: {fileID: 7216959600522375521, guid: 681eef916d122814e8b635b7aecb4634, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3332,10 +3352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46871a71cbd23e14b8235ea235ad6acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postPanel1: {fileID: 1133945824}
-  postPanel2: {fileID: 1887340978}
-  postPanel3: {fileID: 1519240770}
-  postPanel4: {fileID: 140812634}
+  postPanels: []
 --- !u!4 &1455671890
 Transform:
   m_ObjectHideFlags: 0
