@@ -59,6 +59,12 @@ Vier Aussagen werden präsentiert, die richtigen müssen ausgewählt werden.
 Screenshots:
 
 <img width="831" height="436" alt="G1-ingameBild (1)" src="https://github.com/user-attachments/assets/60bc204c-6ac8-4c8a-8a55-6ce9931aa3ee" />
+<img width="1214" height="656" alt="G1-ingameBild (5)" src="https://github.com/user-attachments/assets/c6ae32d2-b12a-4baf-8ee7-0aebabf9ba83" />
+<img width="837" height="459" alt="G1-ingameBild (6)" src="https://github.com/user-attachments/assets/9d61b382-9110-431a-98b9-08ba782be2e6" />
+<img width="843" height="463" alt="G1-ingameBild (7)" src="https://github.com/user-attachments/assets/4af1674c-102c-45cc-8712-746e20fea044" />
+<img width="804" height="441" alt="G1-ingameBild (8)" src="https://github.com/user-attachments/assets/ef6da63f-82d4-4662-bdc7-788dc6360443" />
+<img width="837" height="460" alt="G1-ingameBild (4)" src="https://github.com/user-attachments/assets/eb297bfa-74e6-4885-886a-48290d56871f" />
+
 
 
 Development Platform
