@@ -79,6 +79,7 @@ Aufgabenbereiche:
 Michael H.:
   >1. Semester:
     > Umsetzung des Menues und der Einstellungen und dessen einbindungen in die jeweiligen Szenen --> Im Menue: Weiterspielen, Optionen und rueckkehr zur Startszene, in den Optionen: Einstellungen fuer Qualitaet, Vollbild und die Resolution, (die Einstellung fuer          Volume wurde von Samuel erstellt). Erstellung des Buttons fuer Infos(umsetzung dieser von Samuel). Im Start Menue erstellung fuer die konnektivitaet fuer Story und Tutorial und die hinzufuegung der Einstellungen.
+    > Refactoring: #7 und #9
 
 Development Platform
 
