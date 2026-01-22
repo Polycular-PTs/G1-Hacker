@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public GameObject MenuBox;
-    
+    public GameObject UiManager;
+    public GameObject SettingsPanel;
+
+    private void Start()
+    {
+        SettingsPanel.SetActive(false);
+    }
+
     public void TutorialButton()
     {
         SceneManager.LoadScene("TUT");
@@ -20,12 +26,21 @@ public class StartMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void MenuButton()
+    public void SettingsButton()
     {
-        MenuBox.gameObject.SetActive(true);
+        SettingsPanel.SetActive(true);
+        UiManager.SetActive(false);
+
+        Time.timeScale = 1;
     }
-    public void CloseMenuButton()
+    public void Update()
     {
-        MenuBox.gameObject.SetActive(false);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SettingsPanel.SetActive(false);
+            UiManager.SetActive(true);
+
+            Time.timeScale = 0;
+        }
     }
 }
