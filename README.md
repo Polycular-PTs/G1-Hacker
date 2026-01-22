@@ -1,32 +1,17 @@
-<<<<<<< HEAD
-# G1 – Hacker
+G1 – Hacker
+
+Projektbeschreibung
+
+Das Projekt ist ein 2D-Spiel, in dem Spieler:innen in die Rolle eines Hackers schlüpfen, Passwörter knacken und ihr Wissen in verschiedenen Minispielen unter Beweis stellen.
+
+
+Ziel des Projekts ist es, Kindern und Jugendlichen auf spielerische Weise zu vermitteln, wie wichtig der verantwortungsvolle Umgang mit persönlichen Daten im Internet ist. Das Spiel zeigt, wie leicht schwache Passwörter und öffentlich zugängliche Informationen missbraucht werden können, und sensibilisiert für die Bedeutung starker Passwörter sowie sicherer Online-Gewohnheiten.
 
 
 
-### Projektbeschreibung
+Spiel- / Nutzungsanleitung
 
-
-
-G1 – Hacker ist ein 2D-Lernspiel, in dem Spieler: innen in die Rolle eines Hackers schlüpfen und versuchen, Passwörter zu knacken.  
-
-Dabei lernen sie auf spielerische Weise, wie leicht schwache Passwörter und öffentlich zugängliche Informationen aus sozialen Netzwerken missbraucht werden können.
-
-
-
-Ziel des Projekts ist es, Kinder und Jugendliche für den verantwortungsvollen Umgang mit persönlichen Daten im Internet zu sensibilisieren.  
-
-Das Spiel vermittelt die Bedeutung von starken Passwörtern, Datenschutz und sicheren Online-Gewohnheiten.
-
-
-
-### 
-
-### Spiel- / Nutzungsanleitung
-
-
-
-#### Interaktion \& Steuerung
-
+Interaktion \& Steuerung
 
 
 Tastatur
@@ -47,10 +32,7 @@ Maus
 
 
 
-
-
-#### Spielablauf
-
+Spielablauf
 
 
 1\. Die Spieler: innen durchsuchen simulierte Social-Media-Profile.
@@ -61,45 +43,12 @@ Maus
 
 4\. Nach dem erfolgreichen Erraten eines Passworts folgen verschiedene Minispiele, darunter:
 
-&nbsp;  - 4 Bilder – 1 Wort  
+&nbsp;  - 4 Bilder – 1 Wort : Vier Bilder werden angezeigt, das passende Wort muss erraten werden.
 
-&nbsp;    Vier Bilder werden angezeigt, das passende Wort muss erraten werden.
-
-&nbsp;  - Multiple-Choice-Quiz  
-
-&nbsp;    Mehrere Aussagen werden präsentiert, die richtigen Antworten müssen ausgewählt werden.
+&nbsp;  - Multiple-Choice-Quiz : Vier Aussagen werden präsentiert, die richtigen müssen ausgewählt werden.
 
 
-
-
-
-Screenshots sind in einem eigenen Folder unter Assets
-
-
-
-### Development Platform
-
-
-
-Game Engine: Unity 2022.3.54f1
-
-
-
-Programmiersprache: C#
-
-
-
-Betriebssystem: Windows 10 / Windows 11
-
-### 
-
-### Destination Platform
-
-WebGL
-
-
-
-### Zielgruppe
+Zielgruppe
 
 &nbsp;Kinder und Jugendliche
 
@@ -107,7 +56,7 @@ Schulischer Kontext (Medienkompetenz, Informatik, Datenschutz)
 
 
 
-### Lernziele
+Lernziele
 
 &nbsp;- Verständnis für die Risiken schwacher Passwörter
 
@@ -117,66 +66,6 @@ Schulischer Kontext (Medienkompetenz, Informatik, Datenschutz)
 
 
 
-
-
-=======
-G1 – Hacker
-
-Projektbeschreibung
-
-
-
-Das Projekt ist ein 2D-Spiel, in dem Spieler:innen in die Rolle eines Hackers schlüpfen, Passwörter knacken und ihr Wissen in verschiedenen Minispielen unter Beweis stellen.
-
-
-
-Ziel des Projekts ist es, Kindern und Jugendlichen auf spielerische Weise zu vermitteln, wie wichtig der verantwortungsvolle Umgang mit persönlichen Daten im Internet ist. Das Spiel zeigt, wie leicht schwache Passwörter und öffentlich zugängliche Informationen missbraucht werden können, und sensibilisiert für die Bedeutung starker Passwörter sowie sicherer Online-Gewohnheiten.
-
-
-
-Spiel- / Nutzungsanleitung
-
-Interaktion \& Steuerung
-
-
-
-Tastatur:
-
-Eingabe von Passwörtern, Navigation
-
-
-
-Maus:
-
-Interaktion mit Benutzeroberflächen und sozialen Medien im Spiel
-
-
-
-Spielablauf
-
-
-
-Während des Spiels durchsuchen die Spieler:innen simulierte Social-Media-Profile, um Hinweise auf Passwörter zu finden.
-
-
-
-Diese Profile enthalten neben relevanten Informationen auch versteckte Lerninhalte, die das Bewusstsein für Online-Sicherheit stärken.
-
-
-
-Nachdem ein Passwort erfolgreich erraten wurde, müssen die Spieler:innen ihr Wissen in verschiedenen Minispielen unter Beweis stellen, darunter:
-
-
-
-4 Bilder – 1 Wort:
-
-Vier Bilder werden angezeigt, das passende Wort muss erraten werden.
-
-
-
-Multiple-Choice-Quiz:
-
-Vier Aussagen werden präsentiert, die richtigen müssen ausgewählt werden.
 
 
 Screenshots:
@@ -189,6 +78,10 @@ Screenshots:
 <img width="837" height="460" alt="G1-ingameBild (4)" src="https://github.com/user-attachments/assets/eb297bfa-74e6-4885-886a-48290d56871f" />
 
 
+
+
+Weitere Screenshots sind in einem eigenen Folder unter Assets.
+
 Video:
 
 
@@ -199,6 +92,7 @@ https://github.com/user-attachments/assets/ab2ae35d-ea67-4e21-a61c-40136f4f4786
 
 
 Aufgabenbereiche:
+
 Jedes Teammitglied hat eigenständig an seinem Bereich gearbeitet, passende UI-Elemente und Sounds recherchiert sowie Skripte refactored und/oder erweitert.
 
 Emely A.:
