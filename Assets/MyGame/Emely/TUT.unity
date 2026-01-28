@@ -998,20 +998,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e597a958b8f67e043983f27113540428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passwordInput: {fileID: 1798656310}
-  objs:
+  passwordInputField: {fileID: 1798656310}
+  objectsToHide:
   - {fileID: 1298736136}
   - {fileID: 295862662}
   - {fileID: 1532051185}
   - {fileID: 1798656308}
+  - {fileID: 1393569194}
+  - {fileID: 169858974}
   - {fileID: 157718442}
-  infoText: {fileID: 1393569196}
-  finalText: {fileID: 539966101}
-  hintText: {fileID: 169858976}
-  korrektesPasswort: 123
-  infoDisplayTime: 4
-  nextSceneName: Start
-  hintDisplayTime: 3
+  infoMessageText: {fileID: 1393569196}
+  finalMessageText: {fileID: 539966101}
+  hintMessageText: {fileID: 169858976}
+  correctPassword: 123
+  infoTextDisplayDuration: 4
+  nextScene: Start
+  hintTextDisplayDuration: 3
 --- !u!1 &1186111514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2590,22 +2592,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd70af6ae5c4efd4ea5e68ab1b0346b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFeld: {fileID: 2145684514}
-  texte:
-  - Willkommen im Tutorial! Deine Mission beginnt jetzt.
-  - Du bist Hacker und versuchst Passwoerter mit der Hilfe von Profilen aus den sozialen
-    Medien zu knacken
-  - Oeffne das erste Profil, um nach Hinweisen zu suchen
-  - Kombiniere mehrere Hinweise, um moegliche Passwortmuster zu erkennen
-  szeneObj: {fileID: 331816036}
-  bilder:
-  - {fileID: 1298736136}
-  - {fileID: 295862662}
+  tutorialTextfeld: {fileID: 2145684514}
+  tutorialTexte:
+  - Willkommen im Tutorial! Schoen, dass du da bist! Zeit, in die Rolle eines Hackers
+    zu schluepfen.
+  - In diesem Spiel wirst du Passwoerter knacken und Informationen clever kombinieren
+    muessen.
+  - "Ein wichtiger Hinweis: Social-Media-Profile verraten oft mehr, als man denkt;
+    dort findest du h\xE4ufig den entscheidenden Code."
+  - "Genau das schauen wir uns jetzt gemeinsam an und \xFCben es direkt im Tutorial."
+  - Bist du bereit? Dann lass uns loslegen.
+  sceneObj: {fileID: 331816036}
+  imagesToActivate:
   - {fileID: 1798656308}
   - {fileID: 1532051185}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1393569194}
+  - {fileID: 1298736136}
+  - {fileID: 295862662}
   - {fileID: 157718442}
+  - {fileID: 169858974}
 --- !u!1 &2145684511
 GameObject:
   m_ObjectHideFlags: 0
