@@ -83,19 +83,20 @@ public class MultipleChoiceQuiz : MonoBehaviour
 
     void ResetFrage()
     {
-        richtigeGetroffen = 0;
-        antwortVerarbeitet = false;
-        fehlerText.text = "";
+        //richtigeGetroffen = 0;
+        //antwortVerarbeitet = false;
+        //fehlerText.text = "";
 
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            buttons[i].interactable = true;
-            buttons[i].gameObject.SetActive(true);
+        //for (int i = 0; i < buttons.Length; i++)
+        //{
+        //    buttons[i].interactable = true;
+        //    buttons[i].gameObject.SetActive(true);
 
-            buttons[i].image.color = Color.white; 
-        }
+        //    buttons[i].image.color = Color.white; 
+        //}
 
-        tryAgainButton.gameObject.SetActive(false);
+        //tryAgainButton.gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     IEnumerator SzeneNachDelayLaden()
