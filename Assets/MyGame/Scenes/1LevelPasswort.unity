@@ -753,7 +753,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1455671889}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
         m_MethodName: HidePost4
         m_Mode: 1
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1455671889}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
         m_MethodName: HidePost1
         m_Mode: 1
@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1455671889}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
         m_MethodName: HidePost2
         m_Mode: 1
@@ -2476,7 +2476,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 30
   m_Viewport: {fileID: 1656958399}
   m_HorizontalScrollbar: {fileID: 360428124}
   m_VerticalScrollbar: {fileID: 1640756340}
@@ -3035,7 +3035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1455671889}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
         m_MethodName: HidePost3
         m_Mode: 1
@@ -3266,51 +3266,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8815519802324737488, guid: a8a7f8dc894fa4d458035f5a8eeacec0, type: 3}
   m_PrefabInstance: {fileID: 1436109863}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1455671888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1455671890}
-  - component: {fileID: 1455671889}
-  m_Layer: 0
-  m_Name: SocialManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1455671889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455671888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46871a71cbd23e14b8235ea235ad6acb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  postFeed: {fileID: 0}
---- !u!4 &1455671890
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455671888}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1459284067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3740,8 +3695,8 @@ MonoBehaviour:
   hintText: {fileID: 456678433}
   HintText: Sie liebt ihre Katze Tom seit seiner Geburt!
   correctPassword: 12032016
-  gameOverSceneNumb: GameOver1
-  nextScene: Quiz1
+  gameOverSceneNumb: GameOver
+  nextScene: Quiz
   audioSource: {fileID: 1552046947}
   correctAudio: {fileID: 8300000, guid: b409652b5b45fc149a6a29d5658d09cf, type: 3}
   wrongAudio: {fileID: 8300000, guid: 3febc731a816f7c4ca4cf80d07f90088, type: 3}
@@ -6207,9 +6162,33 @@ PrefabInstance:
       value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 2657771722330652198, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657771722330652198, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657771722330652198, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 69049321}
+    - target: {fileID: 2657771722330652198, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657771722330652198, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657771722330652198, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570922608450739643, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
+      propertyPath: m_text
+      value: BACK
+      objectReference: {fileID: 0}
     - target: {fileID: 8038690222469630806, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6272,11 +6251,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038690222469630806, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -147
+      value: -107
       objectReference: {fileID: 0}
     - target: {fileID: 8038690222469630806, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 462
+      value: 444
       objectReference: {fileID: 0}
     - target: {fileID: 8038690222469630806, guid: fd2144439da40454cb41c91929d4ad91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6400,4 +6379,3 @@ SceneRoots:
   - {fileID: 1788500850}
   - {fileID: 1965792680}
   - {fileID: 1552046946}
-  - {fileID: 1455671890}

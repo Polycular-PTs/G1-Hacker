@@ -7,7 +7,10 @@ using TMPro;
 
 public class MultipleChoiceQuiz : MonoBehaviour
 {
-    public Button[] buttons;                        
+    public LevelProgress level;
+
+    public Button[] buttons;
+    public TMP_Text headerText;
     public TMP_Text fehlerText;                  
     public Button tryAgainButton;                  
     public int[] richtigeAntworten;
@@ -24,12 +27,22 @@ public class MultipleChoiceQuiz : MonoBehaviour
 
     void Start()
     {
-        foreach (Button btn in buttons)
+        headerText.text = level.levels[level.currentLevel].quiz.header;
+        richtigeAntworten = level.levels[level.currentLevel].quiz.rightAnswers;
+        nextScene = level.levels[level.currentLevel].quiz.nextScene;
+
+        foreach (var btn in buttons)
         {
             btn.onClick.AddListener(() => OnButtonClick(btn));
-
-
         }
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            
+            buttons[i].GetComponentInChildren<TMP_Text>().text = level.levels[level.currentLevel].quiz.answers[i];
+            
+        }
+
         tryAgainButton.gameObject.SetActive(false);
         tryAgainButton.onClick.AddListener(ResetFrage);
     }
@@ -83,19 +96,6 @@ public class MultipleChoiceQuiz : MonoBehaviour
 
     void ResetFrage()
     {
-        //richtigeGetroffen = 0;
-        //antwortVerarbeitet = false;
-        //fehlerText.text = "";
-
-        //for (int i = 0; i < buttons.Length; i++)
-        //{
-        //    buttons[i].interactable = true;
-        //    buttons[i].gameObject.SetActive(true);
-
-        //    buttons[i].image.color = Color.white; 
-        //}
-
-        //tryAgainButton.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

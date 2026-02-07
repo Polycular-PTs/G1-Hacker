@@ -6,7 +6,6 @@ using System.Collections;
 
 public class LoginManager : MonoBehaviour
 {
-    
     public TMP_InputField passwordInput;
     public TextMeshProUGUI errorText;
     public Button infoButton;

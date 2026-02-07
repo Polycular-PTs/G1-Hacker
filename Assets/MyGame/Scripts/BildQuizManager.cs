@@ -8,8 +8,11 @@ using TMPro;
 public class BildQuizManager : MonoBehaviour
 {
 
+    public LevelProgress level;
+
     public TMP_InputField inputField;
     public TMP_Text feedbackText;
+    public Image img;
 
     public string[] correctWord = new string[3];
     public string nextScene;
@@ -23,6 +26,12 @@ public class BildQuizManager : MonoBehaviour
 
     void Start()
     {
+        correctWord = level.levels[level.currentLevel].bildQuiz.correctWords;
+        nextScene = level.levels[level.currentLevel].bildQuiz.nextScene;
+        maxTries = level.levels[level.currentLevel].bildQuiz.maxTries;
+        inputField.text = level.levels[level.currentLevel].bildQuiz.hint;
+        img.sprite = level.levels[level.currentLevel].bildQuiz.img;
+
         triesLeft = maxTries;
         feedbackText.text = "";
 
