@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1836090767}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
         m_MethodName: SettingsButton
         m_Mode: 1
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1836090767}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
         m_MethodName: QuitButton
         m_Mode: 1
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1836090767}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
         m_MethodName: TutorialButton
         m_Mode: 1
@@ -1532,6 +1532,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1836090767}
+    - target: {fileID: 4585351365340406866, guid: a0ff766d80ba5fb4c9b7bb30172895b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

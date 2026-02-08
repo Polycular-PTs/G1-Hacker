@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b044968d8deeb48a5d4f573626ccdc, type: 3}
   m_Name: LevelProgress
   m_EditorClassIdentifier: 
-  currentLevel: 1
+  currentLevel: 0
   levels:
   - loadSceneToTryAgain: 1LevelPasswort
     nextSceneAfterLogin: 2LevelPasswort
