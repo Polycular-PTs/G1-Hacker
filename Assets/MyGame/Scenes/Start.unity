@@ -516,6 +516,109 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613134324}
   m_CullTransparentMesh: 1
+--- !u!1 &643054670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643054672}
+  - component: {fileID: 643054671}
+  m_Layer: 0
+  m_Name: Progress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &643054671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643054670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fbb5c0b07024a45babf01411879f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - loadSceneToTryAgain: 1LevelPasswort
+    nextSceneAfterLogin: 2LevelPasswort
+    bildQuiz:
+      correctWords:
+      - Hacker
+      - Hacken
+      img: {fileID: 21300000, guid: c4f72eb9005e89540acc9374cde7253b, type: 3}
+      nextScene: Desktop
+      maxTries: 3
+      hint: H....
+    quiz:
+      header: "Warum sollte man keine Pers\xF6nlichen Informationen als Passwort
+        benutzen?"
+      answers:
+      - "Um Datenschutz besser zu gew\xE4hrleisten"
+      - "Um weniger Gl\xFCckw\xFCnsche zu erhalten"
+      - Damit keine Pakete falsch geliefert werden
+      - Um es Hackern schwerer zu machen
+      rightAnswers: 0000000003000000
+      nextScene: BildQuiz
+  - loadSceneToTryAgain: 2LevelPasswort
+    nextSceneAfterLogin: 3LevelPasswort
+    bildQuiz:
+      correctWords:
+      - Datenschutz
+      img: {fileID: 21300000, guid: baa139541b7be16419ffeb2596c63c6d, type: 3}
+      nextScene: Desktop
+      maxTries: 3
+      hint: D...
+    quiz:
+      header: Weshalb sollte man nicht leichtsinnig Dinge posten?
+      answers:
+      - Damit Freunde und Familie nicht immer alles wissen
+      - "Um sich vor cyberangriffen zu sch\xFCtzen"
+      - Damit man anderen Anonym nachspionieren kann
+      - "Um Hass und \xFCbler Nachrede aus dem weg zu gehen"
+      rightAnswers: 0100000003000000
+      nextScene: BildQuiz
+  - loadSceneToTryAgain: 3LevelPasswort
+    nextSceneAfterLogin: Start
+    bildQuiz:
+      correctWords:
+      - Firewall
+      - firewall
+      img: {fileID: 21300000, guid: 025872ad11ff4694f9a257a3e4a6470c, type: 3}
+      nextScene: Desktop
+      maxTries: 3
+      hint: F...
+    quiz:
+      header: Was kann man in den Einstellungen nicht umstellen?
+      answers:
+      - "Pers\xF6nliche Angaben zb. Geburtstag"
+      - Nutzername
+      - Welche Daten die Firma speichert und verkauft
+      - Welchen Personen du folgst
+      rightAnswers: 0000000003000000
+      nextScene: BildQuiz
+  currentLevel: 0
+--- !u!4 &643054672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643054670}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1040.9135, y: 504.04926, z: 1.9121331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &968576684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,3 +1657,4 @@ SceneRoots:
   - {fileID: 991476792}
   - {fileID: 1836090769}
   - {fileID: 2109892920}
+  - {fileID: 643054672}

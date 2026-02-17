@@ -8,8 +8,6 @@ using TMPro;
 public class BildQuizManager : MonoBehaviour
 {
 
-    public LevelProgress level;
-
     public TMP_InputField inputField;
     //public TMP_Text feedbackText;
     public Image img;
@@ -22,15 +20,21 @@ public class BildQuizManager : MonoBehaviour
     public AudioClip correctAudio;
     public AudioClip wrongAudio;
 
+
+    public List<Level> levels;
+    public int currentLevel;
+
     public GameObject retryButton; 
 
     void Start()
     {
-        correctWord = level.levels[level.currentLevel].bildQuiz.correctWords;
-        nextScene = level.levels[level.currentLevel].bildQuiz.nextScene;
-        //maxTries = level.levels[level.currentLevel].bildQuiz.maxTries;
-        inputField.text = level.levels[level.currentLevel].bildQuiz.hint;
-        img.sprite = level.levels[level.currentLevel].bildQuiz.img;
+        levels = Progress.Instance.levels;
+        currentLevel = Progress.Instance.currentLevel;
+
+        correctWord = levels[currentLevel].bildQuiz.correctWords;
+        nextScene = levels[currentLevel].bildQuiz.nextScene;
+        inputField.text = levels[currentLevel].bildQuiz.hint;
+        img.sprite = levels[currentLevel].bildQuiz.img;
 
         triesLeft = int.MaxValue;
         //feedbackText.text = "";

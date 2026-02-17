@@ -3,13 +3,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LevelProgress", menuName = "Scriptable Objects/LevelProgress")]
-public class LevelProgress : ScriptableObject
-{
-    public int currentLevel;
-    public List<Level> levels;
-}
-
 [Serializable]
 public class Level
 {

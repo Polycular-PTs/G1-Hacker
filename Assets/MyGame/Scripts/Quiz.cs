@@ -7,7 +7,7 @@ using TMPro;
 
 public class MultipleChoiceQuiz : MonoBehaviour
 {
-    public LevelProgress level;
+    
 
     public Button[] buttons;
     public TMP_Text headerText;
@@ -17,8 +17,9 @@ public class MultipleChoiceQuiz : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip correctAudio;
     public AudioClip wrongAudio;
-   
 
+    public List<Level> levels;
+    public int currentLevel;
 
     private int richtigeGetroffen = 0;
     private bool antwortVerarbeitet = false;
@@ -27,9 +28,12 @@ public class MultipleChoiceQuiz : MonoBehaviour
 
     void Start()
     {
-        headerText.text = level.levels[level.currentLevel].quiz.header;
-        richtigeAntworten = level.levels[level.currentLevel].quiz.rightAnswers;
-        nextScene = level.levels[level.currentLevel].quiz.nextScene;
+        levels = Progress.Instance.levels;
+        currentLevel = Progress.Instance.currentLevel;
+
+        headerText.text = levels[currentLevel].quiz.header;
+        richtigeAntworten = levels[currentLevel].quiz.rightAnswers;
+        nextScene = levels[currentLevel].quiz.nextScene;
 
         foreach (var btn in buttons)
         {
@@ -39,7 +43,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             
-            buttons[i].GetComponentInChildren<TMP_Text>().text = level.levels[level.currentLevel].quiz.answers[i];
+            buttons[i].GetComponentInChildren<TMP_Text>().text = levels[currentLevel].quiz.answers[i];
             
         }
 

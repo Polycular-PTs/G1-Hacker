@@ -6,25 +6,24 @@ using UnityEngine.SceneManagement;
 public class Scenes : MonoBehaviour
 {
    public string nameScene;
-    public LevelProgress levels;
-    public bool isGameOverScreen;
+   public bool isGameOverScreen;
 
     private void Start()
     {
         if (isGameOverScreen)
         {
-            nameScene = levels.levels[levels.currentLevel].loadSceneToTryAgain;
+            nameScene = Progress.Instance.levels[Progress.Instance.currentLevel].loadSceneToTryAgain;
         }
         else
         {
-            nameScene = levels.levels[levels.currentLevel].nextSceneAfterLogin;
+            nameScene = Progress.Instance.levels[Progress.Instance.currentLevel].nextSceneAfterLogin;
         }
        
     }
 
     public void UpdateLevel()
     {
-        levels.currentLevel++;
+        Progress.Instance.currentLevel++;
     }
 
     public void NextLevel()
