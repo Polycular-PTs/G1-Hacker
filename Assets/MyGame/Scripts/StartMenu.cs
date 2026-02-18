@@ -20,7 +20,7 @@ public class StartMenu : MonoBehaviour
     
     public void StartButton()
     {
-        SceneManager.LoadScene("1LevelPasswort");
+        SceneManager.LoadScene("Story");
     }
     public void QuitButton()
     {

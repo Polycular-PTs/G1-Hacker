@@ -417,12 +417,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: ShowPost2
-        m_Mode: 1
+        m_MethodName: ShowPost
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -550,12 +550,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: ShowPost4
-        m_Mode: 1
+        m_MethodName: ShowPost
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -837,7 +837,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: HidePost4
+        m_MethodName: ReturnButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1905,7 +1905,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: HidePost1
+        m_MethodName: ReturnButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2038,12 +2038,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: ShowPost3
-        m_Mode: 1
+        m_MethodName: ShowPost
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2357,7 +2357,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: HidePost2
+        m_MethodName: ReturnButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2490,8 +2490,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: ShowPost1
-        m_Mode: 1
+        m_MethodName: ShowPost
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3200,7 +3200,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455671889}
         m_TargetAssemblyTypeName: PostManager, Assembly-CSharp
-        m_MethodName: HidePost3
+        m_MethodName: ReturnButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3352,7 +3352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46871a71cbd23e14b8235ea235ad6acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postPanels: []
+  postPanels:
+  - {fileID: 1133945824}
+  - {fileID: 1887340978}
+  - {fileID: 1519240770}
+  - {fileID: 140812634}
 --- !u!4 &1455671890
 Transform:
   m_ObjectHideFlags: 0

@@ -1369,7 +1369,7 @@ MonoBehaviour:
   - {fileID: 948050327}
   - {fileID: 1217068608}
   - {fileID: 1222418589}
-  nextScene: Start
+  nextScene: 1LevelPasswort
 --- !u!224 &1338074050
 RectTransform:
   m_ObjectHideFlags: 0
