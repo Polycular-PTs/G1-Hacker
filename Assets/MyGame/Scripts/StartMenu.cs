@@ -15,7 +15,7 @@ public class StartMenu : MonoBehaviour
     
     public void StartButton()
     {
-        SceneManager.LoadScene("Story");
+        SceneManager.LoadScene("1LevelPasswort");
     }
     public void QuitButton()
     {
