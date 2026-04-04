@@ -8,11 +8,6 @@ public class StartMenu : MonoBehaviour
     public GameObject UiManager;
     public GameObject SettingsPanel;
 
-    private void Start()
-    {
-        SettingsPanel.SetActive(false);
-    }
-
     public void TutorialButton()
     {
         SceneManager.LoadScene("TUT");

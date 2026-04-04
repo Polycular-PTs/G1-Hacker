@@ -9,7 +9,8 @@ public class BildQuizManager : MonoBehaviour
 {
 
     public TMP_InputField inputField;
-    public TMP_Text feedbackText;
+    //public TMP_Text feedbackText;
+    public Image img;
 
     public string[] correctWord = new string[3];
     public string nextScene;
@@ -19,12 +20,24 @@ public class BildQuizManager : MonoBehaviour
     public AudioClip correctAudio;
     public AudioClip wrongAudio;
 
+
+    public List<Level> levels;
+    public int currentLevel;
+
     public GameObject retryButton; 
 
     void Start()
     {
-        triesLeft = maxTries;
-        feedbackText.text = "";
+        levels = Progress.Instance.levels;
+        currentLevel = Progress.Instance.currentLevel;
+
+        correctWord = levels[currentLevel].bildQuiz.correctWords;
+        nextScene = levels[currentLevel].bildQuiz.nextScene;
+        inputField.text = levels[currentLevel].bildQuiz.hint;
+        img.sprite = levels[currentLevel].bildQuiz.img;
+
+        triesLeft = int.MaxValue;
+        //feedbackText.text = "";
 
         retryButton.SetActive(false); 
     }
@@ -36,7 +49,7 @@ public class BildQuizManager : MonoBehaviour
         if (System.Array.Exists(correctWord, w =>
         w.Equals(userInput, System.StringComparison.OrdinalIgnoreCase)))
         {
-            feedbackText.text = "Richtig!";
+            //feedbackText.text = "Richtig!";
             audioSource.PlayOneShot(correctAudio);
             Invoke("LoadWinScene", 1.5f);
         }
@@ -45,19 +58,19 @@ public class BildQuizManager : MonoBehaviour
             triesLeft--;
             audioSource.PlayOneShot(wrongAudio);
 
-            if (triesLeft > 0)
+            //if (triesLeft > 0)
 
-            {
-                feedbackText.text = "Falsch! Noch " + triesLeft + " Versuche.";
-            }
-            else
-            {
+            //{
+            //    feedbackText.text = "Falsch! Noch " + triesLeft + " Versuche.";
+            //}
+            //else
+            //{
 
-                feedbackText.text = "Falsch! Keine Versuche mehr.";
-                retryButton.SetActive(true);
-                inputField.interactable = false;
+            //    feedbackText.text = "Falsch! Keine Versuche mehr.";
+            //    retryButton.SetActive(true);
+            //    inputField.interactable = false;
 
-            }
+            //}
         }
     }
 

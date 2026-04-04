@@ -7,15 +7,19 @@ using TMPro;
 
 public class MultipleChoiceQuiz : MonoBehaviour
 {
-    public Button[] buttons;                        
+    
+
+    public Button[] buttons;
+    public TMP_Text headerText;
     public TMP_Text fehlerText;                  
     public Button tryAgainButton;                  
     public int[] richtigeAntworten;
     public AudioSource audioSource;
     public AudioClip correctAudio;
     public AudioClip wrongAudio;
-   
 
+    public List<Level> levels;
+    public int currentLevel;
 
     private int richtigeGetroffen = 0;
     private bool antwortVerarbeitet = false;
@@ -24,12 +28,25 @@ public class MultipleChoiceQuiz : MonoBehaviour
 
     void Start()
     {
-        foreach (Button btn in buttons)
+        levels = Progress.Instance.levels;
+        currentLevel = Progress.Instance.currentLevel;
+
+        headerText.text = levels[currentLevel].quiz.header;
+        richtigeAntworten = levels[currentLevel].quiz.rightAnswers;
+        nextScene = levels[currentLevel].quiz.nextScene;
+
+        foreach (var btn in buttons)
         {
             btn.onClick.AddListener(() => OnButtonClick(btn));
-
-
         }
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            
+            buttons[i].GetComponentInChildren<TMP_Text>().text = levels[currentLevel].quiz.answers[i];
+            
+        }
+
         tryAgainButton.gameObject.SetActive(false);
         tryAgainButton.onClick.AddListener(ResetFrage);
     }
@@ -83,19 +100,7 @@ public class MultipleChoiceQuiz : MonoBehaviour
 
     void ResetFrage()
     {
-        richtigeGetroffen = 0;
-        antwortVerarbeitet = false;
-        fehlerText.text = "";
-
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            buttons[i].interactable = true;
-            buttons[i].gameObject.SetActive(true);
-
-            buttons[i].image.color = Color.white; 
-        }
-
-        tryAgainButton.gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     IEnumerator SzeneNachDelayLaden()
